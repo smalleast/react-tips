@@ -1,0 +1,38 @@
+$react-toptips-opacity:0.9;
+$react-toptips-default:#000;
+$react-toptips-info:#2563ab;
+$react-toptips-error:#e02a2d;
+$react-toptips-warn:#ed9f35;
+$react-toptips-success:#359030;
+
+.react-tips{
+  height: 3em;
+  line-height: 3em;
+  font-size: 1.4em;
+  transition: top 0.3s;
+  position: absolute;
+  text-align: center;
+  color:#FFF;
+  width:100%;
+  &[data-visible=true]{
+      top:0;
+  }
+  &[data-visible=false]{
+      top:-3em;
+  }
+  &[data-theme=default]{
+    background: rgba($react-toptips-default,$react-toptips-opacity);
+  }
+  &[data-theme=info]{
+    background: rgba($react-toptips-info,$react-toptips-opacity);
+  }
+  &[data-theme=error]{
+    background:rgba($react-toptips-error,$react-toptips-opacity);
+  }
+  &[data-theme=warn]{
+    background: rgba($react-toptips-warn,$react-toptips-opacity);
+  }
+  &[data-theme=success]{
+    background: rgba($react-toptips-success,$react-toptips-opacity);
+  }
+}
